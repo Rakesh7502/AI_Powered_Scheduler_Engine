@@ -23,3 +23,5 @@ def call_groq_api(prompt):
 
     except Exception as e:
         return f"Error calling Groq API: {str(e)}"
+#except Exception as e:
+    #    return f"Error calling Groq API: {str(e)}"
