@@ -110,3 +110,21 @@ export class JobsComponent {
     this.paginatedJobs = this.jobs.slice(startIndex, endIndex);
   }
 }
+ // async loadData() {
+ //    this.loading = true;
+ //    try {
+ //      const resp = await axios.get(`${environment.backendUrl}/jobs`);
+ //      this.jobs = resp.data;
+ //      this.paginateData();
+ //      console.log(`got ${this.jobs.length} number of jobs.`);
+ //    } catch (error) {
+ //      if (error instanceof AxiosError) {
+ //        const errorData = error.response!.data;
+ //        // console.log(errorData);
+ //      }
+ //      // console.error(error);
+ //    } finally {
+ //      this.loading = false;
+ //    }
+ //  }
+
