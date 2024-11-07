@@ -25,6 +25,27 @@ export class JobDetailsComponent {
     this.loadJobDetails();
   }
 
+  // async play_pause() {
+  //   console.log('play-pause');
+  //   this.working = true;
+  //   try {
+  //     await axios.get(
+  //       `${environment.backendUrl}/jobs/schedule/play-pause/${this.job_id}`,
+  //     );
+  //     this.jobData!.settings.schedule!.pause_status = this.pause_status
+  //       ? 'UNPAUSED'
+  //       : 'PAUSED';
+  //   } catch (error) {
+  //     if (error instanceof AxiosError) {
+  //       const errorData = error.response!.data;
+  //       // console.log(errorData);
+  //     }
+  //     // console.error(error);
+  //   } finally {
+  //     this.working = false;
+  //   }
+  // }
+  
   async play_pause() {
     console.log('play-pause');
     this.working = true;
@@ -68,3 +89,23 @@ export class JobDetailsComponent {
     }
   }
 }
+  // async play_pause() {
+  //   console.log('play-pause');
+  //   this.working = true;
+  //   try {
+  //     await axios.get(
+  //       `${environment.backendUrl}/jobs/schedule/play-pause/${this.job_id}`,
+  //     );
+  //     this.jobData!.settings.schedule!.pause_status = this.pause_status
+  //       ? 'UNPAUSED'
+  //       : 'PAUSED';
+  //   } catch (error) {
+  //     if (error instanceof AxiosError) {
+  //       const errorData = error.response!.data;
+  //       // console.log(errorData);
+  //     }
+  //     // console.error(error);
+  //   } finally {
+  //     this.working = false;
+  //   }
+  }
