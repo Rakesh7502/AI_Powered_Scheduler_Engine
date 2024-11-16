@@ -21,3 +21,4 @@ describe('SchedulerComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+//export describe

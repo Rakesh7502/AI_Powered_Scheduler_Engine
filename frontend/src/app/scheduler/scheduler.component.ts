@@ -98,6 +98,49 @@ export class SchedulerComponent {
   //     return matchesStatus && matchesPauseStatus;
   //   });
   // }
+//testing
+export class SchedulerComponent1 {
+  showFilters = false;
+  statusFilter: string = '';
+  pauseStatusFilter: string = '';
+  expandedJobIds: Set<string> = new Set();
+  loading = true;
+
+  filteredJobs = [
+    // Sample job data
+    { jobId: '1', status: 'Success', runId: 'run1', pauseStatus: 'Active' },
+    { jobId: '2', status: 'Failure', runId: 'run2', pauseStatus: 'Paused' },
+  ];
+
+  jobs: Job[] = [];
+
+  toggleFilters() {
+    this.showFilters = !this.showFilters;
+  }
+
+  isRowExpanded(jobId: string): boolean {
+    return this.expandedJobIds.has(jobId);
+  }
+
+  ngOnInit() {
+    console.log('onInit');
+    this.loadJobs();
+  }
+
+  async loadJobs() {
+    this.loading = true;
+    console.log('loading all the jobs');
+    try {
+      const resp = await axios.get(`${backendUrl}/jobs`);
+      this.jobs = resp.data;
+      // console.log(this.jobs);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      this.loading = false;
+    }
+  }
+
 
   // clearFilters() {
   //   this.statusFilter = '';
