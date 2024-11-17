@@ -16,3 +16,21 @@ export type Job = {
     timeout_seconds: number;
   };
 };
+//testing
+ type Job_schedule= {
+
+  job_id: number;
+  run_as_user_name: string;
+  settings: {
+    email_notifications: {
+      no_alert_for_skipped_runs: boolean;
+    };
+    name: string;
+    queue: {
+      enabled: boolean;
+    };
+    timeout_seconds: number;
+      created_time: number;
+  creator_user_name: string;
+  };
+};
